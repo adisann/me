@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'I Made Wisnu - Data Science ',
-  description: 'Web Portofolio of I Made Wisnu Adi Sanjaya',
+  title: 'Adisan - Data Science ',
+  description: 'Web Portofolio of Adisan',
 };
 
 export default function RootLayout({ children }) {
