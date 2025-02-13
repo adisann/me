@@ -68,7 +68,6 @@ export default function HomePage() {
                       <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Statistical Model</div>
                       <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Clustering</div>
                       <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Classification</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Deep Learning</div>
                     </div>
                   </div>
 
