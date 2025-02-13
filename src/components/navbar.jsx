@@ -11,7 +11,7 @@ export const Navbar = () => {
       <div className="container flex h-14 items-center">
         <div className="lg:ml-64 ml-4 mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">I Made Wisnu</span>
+            <span className="font-bold">Adisan</span>
           </Link>
         </div>
 
