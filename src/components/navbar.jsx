@@ -7,35 +7,36 @@ import { Menu } from 'lucide-react';
 
 export const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 ">
-      <div className="container flex h-14 items-center">
-        <div className="lg:ml-64 ml-4 mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+    <nav className="sticky md:px-36 top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center md:ml-36">
+          <Link href="/" className="flex items-center space-x-2">
             <span className="font-bold">Adisan</span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-between">
+        <div className="hidden md:flex">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
+                <Link href="/">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Home</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/about" legacyBehavior passHref>
+                <Link href="/about">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>About</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/projects" legacyBehavior passHref>
+                <Link href="/projects">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Projects</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/contact" legacyBehavior passHref>
+                <Link href="/contact">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contact</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -43,16 +44,11 @@ export const Navbar = () => {
           </NavigationMenu>
         </div>
 
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button variant="default" className="hidden md:flex">
-            <Download className="mr-2 h-4 w-4" />
-            Resume
-          </Button>
-
-          {/* Mobile Navigation */}
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
@@ -71,10 +67,6 @@ export const Navbar = () => {
                 <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
                   Contact
                 </Link>
-                <Button variant="default" className="w-full">
-                  <Download className="mr-2 h-4 w-4" />
-                  Resume
-                </Button>
               </div>
             </SheetContent>
           </Sheet>

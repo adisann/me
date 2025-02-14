@@ -30,13 +30,13 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Connect</h3>
             <div className="flex space-x-4">
-              <a href="/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-black" aria-label="GitHub">
+              <a href="http://github.com/adisann/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-black" aria-label="GitHub">
                 <Github />
               </a>
-              <a href="/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-black" aria-label="LinkedIn">
+              <a href="https://id.linkedin.com/in/i-made-wisnu-adi-sanjaya-79a022240" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-black" aria-label="LinkedIn">
                 <Linkedin />
               </a>
-              <a href="/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-black" aria-label="LinkedIn">
+              <a href="mailto:wisnusanjaya0979@gmail.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-black" aria-label="LinkedIn">
                 <Mail />
               </a>
             </div>

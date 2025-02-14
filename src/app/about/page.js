@@ -1,23 +1,27 @@
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { Building, GraduationCap, BriefcaseBusiness, FileBadge } from 'lucide-react';
+import { Building, Code, GraduationCap, BriefcaseBusiness, FileBadge } from 'lucide-react';
 import { SkillComponent } from '../[home]/_components/skill-components';
 import { WorkComponent } from '@/components/work-component';
 import { CertificateComponent } from '@/components/certificate-component';
 import { EducationComponent } from '@/components/education-component';
 import { skills, works, certificates, education } from '@/app/_constants/constants';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="flex min-h-screen flex-col">
+      <main className="flex min-h-screen px-36 flex-col">
         <div className="min-h-screen ">
           <div className="container mx-auto px-4 py-24">
             <div className="mb-20">
               <div className="flex  flex-col md:flex-row items-center gap-8">
-                <div className="relative h-48 w-48 rounded-full *:overflow-hidden border-4">
-                  <img src="" alt="My Profile" className="h-auto" />
+                <div className="relative max-w-48 rounded-full *:overflow-hidden border-4">
+                  <Avatar className="w-full h-full">
+                    <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                    <AvatarFallback>AD</AvatarFallback>
+                  </Avatar>
                 </div>
                 <div className="w-full">
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">Adisan</h1>
@@ -36,13 +40,18 @@ export default function Page() {
                   Profesional Summary
                 </h2>
                 <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                  <p>Data Science Student, bla bla bla</p>
+                  <p>
+                    I am a dedicated Data Science student and Research Assistant with a robust background in applying machine learning techniques to real-world challenges. My research in early stunting detection employs multi-modal
+                    classification methods, while my work in clustering and data analytics has delivered actionable insights for public health and business segmentation projects. I have also demonstrated strong web development skills
+                    through projects involving Google Maps web scraping, and building full-stack applications with Next.js and MVC PHP. Passionate about blending research with practical solutions, I strive to drive innovation and efficiency
+                    across both academic and industry initiatives.
+                  </p>
                 </div>
               </div>
             </div>
             <div className="mb-20">
               <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-                <Building />
+                <Code />
                 Skill & Expertise
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -70,9 +79,11 @@ export default function Page() {
                 Certificates & Awards
               </h2>
               <div className="space-y-6">
-                {certificates.map((item, index) => (
-                  <CertificateComponent key={index} title={item.title} image={item.image} institution={item.institution} issuedAt={item.issuedAt} />
-                ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {certificates.map((item, index) => (
+                    <CertificateComponent key={index} title={item.title} image={item.image} institution={item.institution} issuedAt={item.issuedAt} />
+                  ))}
+                </div>
               </div>
             </div>
 

@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main className="flex-grow container mx-auto px-6 pt-16 pb-8">
+      <main className="flex-grow container mx-auto px-36 pt-16 pb-8">
         <div className="flex w-full flex-col min-h-screen">
           <section className="text-center items-center justify-center flex-1 flex flex-col min-h-[90vh]">
             <div>

@@ -2,7 +2,7 @@ export const ProjectComponent = ({ title, image, type, description, tags, github
   return (
     <div className="h-full">
       <div className="bg-card rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
-        <div className="relative h-48">
+        <div className="relative max-h-48 overflow-hidden">
           <img src={image} alt={title} />
         </div>
         <div className="p-6 space-y-4">
