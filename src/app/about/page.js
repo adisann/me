@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="flex min-h-screen px-36 flex-col">
+      <main className="flex min-h-screen px-8 lg:px-36 flex-col">
         <div className="min-h-screen ">
           <div className="container mx-auto px-4 py-24">
             <div className="mb-20">

@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="flex-grow container mx-auto px-36 pt-16 pb-8">
+      <main className="flex-grow container mx-auto  px-8 lg:px-36 pt-16 pb-8">
         <div className="container py-12">
           <div className="mx-auto max-w-[58rem] space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold">Projects</h1>

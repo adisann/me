@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="flex-grow container mx-auto px-36 pb-8">
+      <main className="flex-grow container mx-auto px-8 lg:px-36 pb-8">
         <div className="container mx-auto px-4 py-8 max-w-2xl">
           <div className="space-y-6">
             <div className="space-y-6">
