@@ -9,7 +9,7 @@ export const EducationComponent = ({ degree, duration, institution, achievements
           </div>
           <div className="text-right mt-1 md:mt-0">
             <p className="text-sm text-muted-foreground">{duration}</p>
-            <p className="text-sm font-medium text-primary">{gpa}</p>
+            <p className="text-sm font-medium text-primary">GPA: {gpa}</p>
           </div>
         </div>
         <div className="mt-3">
@@ -21,9 +21,9 @@ export const EducationComponent = ({ degree, duration, institution, achievements
         </div>
         <div className="mt-4">
           <p className="text-sm font-medium mb-2">Activities and Organizations</p>
-          <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 space-x-2 ml-2">
+          <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1  ml-2">
             {organizations.map((item) => (
-              <li class="mr-1">{item}</li>
+              <li>{item}</li>
             ))}
           </ul>
         </div>

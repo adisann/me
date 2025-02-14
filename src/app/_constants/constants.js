@@ -124,8 +124,8 @@ export const education = [
     degree: 'Bachelor of Science in Data Science',
     duration: 'September 2023 - Present',
     institution: 'Telkom University Surabaya',
-    achievements: ['Runner Up 2 LCC Instiki 2023 ', 'Runner Up II LCT IDB Bali 2023'],
-    organizations: ['Machine Learning Assistent Tech and Curriculum', 'Young Staff of the Data Science Student Association'],
+    achievements: ['Runner Up 2 LCC Instiki 2023 ', 'Runner Up 1 LCT IDB Bali 2023'],
+    organizations: ['Machine Learning Assistent Tech and Curriculum', 'Young Staff of the Data Science Student Association', 'Research Assistant in Data Science Field'],
     gpa: '3.9',
   },
 ];
