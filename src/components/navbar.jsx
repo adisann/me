@@ -30,8 +30,8 @@ export const Navbar = () => {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/services" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>Services</NavigationMenuLink>
+                <Link href="/projects" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>Projects</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -65,8 +65,8 @@ export const Navbar = () => {
                 <Link href="/about" className="text-sm font-medium transition-colors hover:text-primary">
                   About
                 </Link>
-                <Link href="/services" className="text-sm font-medium transition-colors hover:text-primary">
-                  Services
+                <Link href="/projects" className="text-sm font-medium transition-colors hover:text-primary">
+                  Projects
                 </Link>
                 <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
                   Contact

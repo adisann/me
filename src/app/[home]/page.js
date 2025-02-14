@@ -2,7 +2,10 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Link from 'next/link';
 import { GraduationCap } from 'lucide-react';
-import { Brain, Database, CodeXml } from 'lucide-react';
+import { UserRoundSearch } from 'lucide-react';
+import { SkillComponent } from './_components/skill-components';
+import { ProjectComponent } from './_components/project-component';
+import { skills, projects } from '@/app/_constants/constants';
 
 export default function HomePage() {
   return (
@@ -41,55 +44,34 @@ export default function HomePage() {
                   <p>As a Data Science Student, I specialized in developing AI/ML solution, and crafting analytical dashboard for businesses.</p>
                 </div>
                 <div className="grid lg:col-span-3 sm:grid-cols-2 gap-6">
-                  <div className="rounded-xl border bg-card text-card-foreground shadow p-6 hover:shadow-md transition-shadow">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="p-2 rounded-lg bg-purple-500/10 ">
-                        <Brain className="w-6 h-6" />
-                      </div>
-                      <h3 className="text-xl font-semibold">AI & Machine Learning</h3>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Meta Heuristics</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Natural Language Processing</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Deep Learning</div>
-                    </div>
-                  </div>
-                  <div className="rounded-xl border bg-card text-card-foreground shadow p-6 hover:shadow-md transition-shadow">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="p-2 rounded-lg bg-purple-500/10 ">
-                        <Database className="w-6 h-6" />
-                      </div>
-                      <h3 className="text-xl font-semibold">Data Science</h3>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Web Scraping</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Crafting Analytical Dashboard</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Dimensionality Reduction</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Statistical Model</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Clustering</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Classification</div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-xl border bg-card text-card-foreground shadow p-6 hover:shadow-md transition-shadow">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="p-2 rounded-lg bg-purple-500/10 ">
-                        <CodeXml className="w-6 h-6" />
-                      </div>
-                      <h3 className="text-xl font-semibold">Programming</h3>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Python</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">JavaScript</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Java</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">C++</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Pascal</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">SQL</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">Pandas</div>
-                      <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold  transition-transform">NumPy</div>
-                    </div>
-                  </div>
+                  {skills.map((item, index) => (
+                    <SkillComponent key={index} title={item.title} icon={item.icon} skills={item.skills} />
+                  ))}
                 </div>
+              </div>
+              <div className="text-center group relative">
+                <Link href="/about" className="inline-flex h-12 items-center justify-center text-sm  hover:bg-gray-800 font-medium text-white rounded-lg bg-gray-950 space-x-4 p-4">
+                  Learn more about me
+                  <UserRoundSearch className="ml-2  group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </section>
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto text-center mb-21">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Recent Projects</h2>
+                <p className="mt-4 text-lg text-muted-foreground">Selection of my projects as a Data Science Student</p>
+              </div>
+              <div className="grid gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
+                {projects.map((item, index) =>
+                  item.featured ? <ProjectComponent key={index} title={item.title} image={item.image} type={item.type} description={item.description} tags={item.tags} github={item.github} demo={item.demo} /> : ''
+                )}
+              </div>
+              <div className="mt-12 text-center">
+                <Link href="/projects" className="inline-flex h-12 border border-gray-300 justify-center rounded-lg px-8 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors items-center">
+                  View All Projects
+                </Link>
               </div>
             </div>
           </section>
