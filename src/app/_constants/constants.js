@@ -93,6 +93,20 @@ export const works = [
     jobDesc: ['Developing Web Application', 'Implementing CRUD', 'Implementing Authentication', 'Implementing Authorization'],
     tags: ['PHP', 'MySQL', 'Bootstrap', 'Laravel'],
   },
+  {
+    title: 'On The Job Training at PT. Solusi Anak Sakti',
+    location: 'Denpasar, Bali, Indonesia',
+    duration: '3 Months',
+    typeOfWork: 'Work From Office',
+
+    dateOfWork: 'Desember 2021 - February 2022',
+    jobDesc: [
+      'Supporting database management and data structuring',
+      'Assisting in SQL query optimization and data retrieval processes',
+      'Collaborating with the team in analyzing cooperative health criteria based on type and KUK standards',
+    ],
+    tags: ['MySQL', 'EXCEL'],
+  },
 ];
 
 export const certificates = [
@@ -124,8 +138,8 @@ export const education = [
     degree: 'Bachelor of Science in Data Science',
     duration: 'September 2023 - Present',
     institution: 'Telkom University Surabaya',
-    achievements: ['Runner Up 2 LCC Instiki 2023 ', 'Runner Up 1 LCT IDB Bali 2023'],
-    organizations: ['Machine Learning Assistent Tech and Curriculum', 'Young Staff of the Data Science Student Association', 'Research Assistant in Data Science Field'],
+    achievements: ['Runner Up 2 LCC Instiki 2023 ', 'Runner Up 1 LCT IDB Bali 2023', ' Winner of ITC Udayana University 2022'],
+    organizations: ['Machine Learning Assistent Tech and Curriculum', 'Young Staff of the Data Science Student Association', 'Research Assistant in Data Science Fields'],
     gpa: '3.9',
   },
 ];
